@@ -27,4 +27,4 @@ async def help_me(ctx):
     await ctx.send("Available commands:\n!loan - Get loan details\n!helpme - List available commands")
 
 # Run the bot
-bot.run("MTI3NDk2Nzg4NjM4NDk4ODIxMA.GF8PjK.TjgroFnMBOL6S49Mie18F5W4z9-76rlQhK5bjk")
+bot.run("BOT TOKEN")
