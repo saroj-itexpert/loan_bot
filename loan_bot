@@ -1,0 +1,30 @@
+import discord
+from discord.ext import commands
+
+# Intents (needed for the bot to see messages)
+intents = discord.Intents.default()
+intents.messages = True
+
+# Bot prefix and setup
+bot = commands.Bot(command_prefix="!", intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f"We have logged in as {bot.user}")
+
+@bot.command(name="loan")
+async def loan(ctx):
+    """
+    Responds to the !loan command with a message.
+    """
+    await ctx.send("Here's some information about loans:\n- Interest Rate: 12%\n- Max Tenure: 1 year\n- Contact astamangal loan_department for more details.")
+
+@bot.command(name="helpme")
+async def help_me(ctx):
+    """
+    Responds to the !helpme command with a list of commands.
+    """
+    await ctx.send("Available commands:\n!loan - Get loan details\n!helpme - List available commands")
+
+# Run the bot
+bot.run("MTI3NDk2Nzg4NjM4NDk4ODIxMA.GF8PjK.TjgroFnMBOL6S49Mie18F5W4z9-76rlQhK5bjk")
